@@ -1,10 +1,13 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "6.6.0"
     }
   }
 }
 
-provider "aws" {}
+provider "aws" {
+  profile = "iac-sso"
+  region  = "us-east-2"
+}
