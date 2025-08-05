@@ -1,10 +1,5 @@
-resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "iac-bucket-aws"
+module "s3" {
+  source = "./modules/s3"
 
-  tags = {
-    Name = "Fisrt bucket"
-    iac = true
-  }
-
-  
+  s3_bucket_name = "iac-project"
 }
