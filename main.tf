@@ -8,7 +8,7 @@ module "s3" {
 }
 
 module "cloudfront" {
-  source             = "./modules/cloudfront"
+  source = "./modules/cloudfront"
 
   origin_id          = module.s3.bucket_id
   bucket_domain_name = module.s3.bucket_domain_name
@@ -23,9 +23,9 @@ module "cloudfront" {
 }
 
 module "sqs" {
-  source  = "terraform-aws-modules/sqs/aws"
+  source = "terraform-aws-modules/sqs/aws"
 
-  name = "iac-sqs"
+  name       = "iac-sqs"
   create_dlq = true
   tags = {
     Iac = true
