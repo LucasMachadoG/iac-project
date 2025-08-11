@@ -1,21 +1,21 @@
 variable "origin_id" {
-  type = string
+  type        = string
   description = "Bucket id"
 }
 
 variable "bucket_domain_name" {
-  type = string
+  type        = string
   description = "Bucket domain name"
 }
 
 variable "cdn_price_class" {
-  type = string
-  default = "PriceClass_200"
+  type        = string
+  default     = "PriceClass_200"
   description = "CDN Price Class"
 }
 
 variable "cdn_tags" {
-  type = map(string)
-  default = {}
+  type        = map(string)
+  default     = {}
   description = "Creative Tags"
 }
